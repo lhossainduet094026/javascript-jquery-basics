@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>
+            Email validation in javascript
+        </title>
+    </head>
+    <body>
+        <script type="text/javascript">
+        function emailValidate()
+        {
+           var email=document.getElementById("email").value;
+           var regx=/^([a-zA-Z0-9\.-_]+)@([a-zA-Z0-9-]+).([a-z]{2,8})(.[a-z])?$/;
+           //email ex:lhossain.ict@nomangroup.com
+           if(regx.test(email))
+           {
+               alert("valid email");
+           }
+           else
+           {
+               alert("invalid email");
+           } 
+        }
+       </script>
+    <label>Email:</label><br/>
+    <input type="text" id="email">
+    <button type="button" onclick="emailValidate()">Validate</button>
+    </body>
+</html>
