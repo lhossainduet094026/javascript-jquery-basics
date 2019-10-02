@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>
+            radio button in javascript
+        </title>
+    </head>
+    <body>
+        <script type="text/javascript">
+        function radioButtonCheck()
+        {
+         var uname = document.getElementById("male");
+         var pass= document.getElementById("female");
+         if (uname.checked==true)
+         {
+             alert(uname.value+" is seleceted");
+         }
+         else  if(pass.checked==true)
+         {
+            alert(pass.value+" is seleceted");
+         }
+         else
+         alert("no gender is selected. ");
+        }
+        </script>
+       
+        <input type="radio"  name="grp1" id="male" value="male">male<br/><br/>
+        
+        <input type="radio"  name="grp1" id="female" value="female">female<br/><br/>
+
+        <button type="button" onclick="radioButtonCheck()">click me</button>
+    </body>
+</html>

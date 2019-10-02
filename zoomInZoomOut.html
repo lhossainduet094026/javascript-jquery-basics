@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <title>
+            Zoom In and Zoom Out in javascript
+        </title>
+    </head>
+    <body>
+        <script type="text/javascript">
+        var width =300;
+        function increase()
+        {
+            //clearInterval(timerId);
+           timerId= setInterval(zoomIn,20);
+        }
+        function zoomIn()
+        {
+            if(width<500)
+            {
+                width = width+1;
+                document.getElementById("img1").style.width=width;
+                console.log(width);
+            }
+            else
+            {
+                clearInterval(timerId);
+            }
+        }
+        function decrease()
+        {
+           // clearInterval(timerId);
+           timerId= setInterval(zoomOut,20);
+        }
+        function zoomOut()
+        {
+            if(width>300)
+            {
+                width = width-1;
+                document.getElementById("img1").style.width=width;
+                console.log(width);
+            }
+            else
+            {
+                clearInterval(timerId);
+            }
+        }
+        </script>
+        <h2 align="center">zoom In zoom Out examples</h2><br/>
+        <img src="images/logoznzfab.jpg" id="img1" width="300" onmouseover="increase()" onmouseout="decrease()" >
+    </body>
+</html>

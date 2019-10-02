@@ -1,0 +1,118 @@
+<html>
+<head>
+     <title>
+           My first javascript code
+     </title>    
+</head>
+<body>     
+       <script type="text/javascript" > 
+            document.write("<h1>hello world</h1>");
+            document.write("<h2>noman group</h2>");
+            document.write("<h3>ict</h3>");
+            document.write("<h4>department</h4>");
+            document.write("<h5>javascript is client side script</h5>");
+            var b,a;
+            //js is dynamically typed and loosely typed.
+            a=100.5;//assignment is right to left associativity
+            b=200;
+            //variable in javascript is case sensitive .so num1 and Num1 is different
+            //first letter should be letter/_/$
+            var flag=false;
+            var c=10;
+            var result = (a+b)+c;// + is  left to right associativity.
+            //result = "no value";
+            var x=100;
+            var y=10.5;
+            var z="ng";
+            var associativity =z+x+y;//assignment is left associativity as z is string then rest after + assume that those are string. 
+            document.write(associativity+"<br/>");
+            document.write(result+"<br/>");
+            document.write(flag+"<br/>");
+            //alert("result: "+result);
+            var age=15;
+            var eligibility =age>18?"y":"n";
+            if(eligibility==="y")
+            {
+               document.write("eligible to give vote<br/>");
+            }
+            else if(eligibility==="n")
+            {
+               document.write("not eligible for vote <br/>");
+           
+            }
+       </script>
+          <script type="text/javascript" >
+               //switch case statement
+               var day = 3;
+               switch(day)
+               {
+                    case 1:
+                    document.write("Saturday<br/>");
+                    break;
+                    case 2:
+                    document.write("Sunday<br/>");
+                    break;
+                    case 3:
+                    document.write("Monday<br/>");
+                    break;
+                    case 4:
+                    document.write("Tuesday<br/>");
+                    break;
+                    case 5:
+                    document.write("Wednesday<br/>");
+                    break;
+
+               }
+               function addTwoNumber(x,y)
+               {
+                    return(x+y);
+               } 
+               
+               var result = addTwoNumber(5,10);
+               document.write("addition result is:"+result+"<br/>");
+               //js array are loosely type so array can hold any type of data in js array
+               //the size of the array is dynamic 
+
+               var arr1=["bmw","marcedes"];
+               //the size of the array is dynamic
+               arr1.push(2);
+               var i;
+               for(i=0;i<arr1.length;i++)
+                    document.write(arr1[i]+"<br/>");
+
+              //single object creation in js(it's just normal object creation)------------------------
+             /* var car ={
+                car_brand:"tesla",
+                car_model:"model 3",
+                car_price:1000,
+                drive:function()
+                {
+                     document.write("car can run fast.");
+                }
+              }
+             car.drive();//property and method calling.*/
+              //to create multiple object using constructor function 
+              //it's like template or class
+              function car(car_brand,car_model,car_price)
+              {
+                   this.car_brand=car_brand;
+                   this.car_model=car_model;
+                   this.car_price = car_price;
+                   this.drive=function()
+                   {
+                        document.write("this is car object<br/>");
+                   }
+              }
+              var c1=new car("bmw","model1","20");
+              c1.drive();
+              var c2=new car("mercedes","model 4",15);
+              document.write(c2.car_model);
+
+              //typeof() returns the type of the data in js
+              //in js we can create new property for an object 
+              //in js we can delete new property from an object
+
+          </script>
+       <p>noman group</p>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<html>
+<head>
+    <title>
+Second js practice
+    </title>
+</head>
+<body>
+    <script type="text/javascript">
+        document.write("input box value retrive<br/><br/>");
+        function transferText()
+        {
+            var x=document.getElementById("text1").value;
+            alert("you typed in input box:"+x);
+            document.getElementById("text1").value="";
+        }
+    </script>
+        <label>enter value</label>
+        <input type="text" id="text1" placeholder="user name">
+        <button type="button" onclick="transferText()">show</button>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>
+            Timing Function in javascript
+        </title>
+    </head>
+    <body>
+        <script type="text/javascript">
+        var timerId=0;
+        var second=0;
+        function msg()
+        {
+          document.getElementById("text").innerHTML=second+"seconds";
+        second++;
+        }
+        function start()
+        {
+            //settimeout is used to do something once after a time interval is passed .
+            //setInterval() is used to do something repeatedly after a time interval. 
+            timerId=window.setInterval(msg,1000);//1000 ms =1 second
+        }
+       // function start()
+      //  {
+            //settimeout is used to do something once after a time interval is passed .
+        //    timerId=window.setTimeout(msg,5000);
+       // }
+        function stop()
+        {
+            //clearTimeOut is used for to stop a timer within clear time out execution start.so it's need the timerId to stop a specific timer.
+          window.clearTimeout(timerId);
+        }
+        </script>
+        <button onclick="start()">start</button><br/><br/>
+        <h2 id="text">timing function example</h2><br/><br/>
+        <button onclick="stop()">stop</button>
+    </body>
+</html>

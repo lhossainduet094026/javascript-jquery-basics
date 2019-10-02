@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>
+            radio button in javascript
+        </title>
+    </head>
+    <body>
+        <script type="text/javascript">
+        function compareTwoText()
+        {
+         var uname = document.getElementById("uname").value;
+         var pass= document.getElementById("pass").value;
+         if (uname==""&&pass=="")
+         {
+             alert("please input value");
+         }
+         else  if(uname==pass)
+         {
+             alert(pass+" is equal to "+uname);
+         }
+         else
+         alert(pass+" is not equal to "+uname);
+        }
+        </script>
+        <label>user name<br/></label>
+        <input type="text" id="uname"><br/><br/>
+        <label>password<br/></label>
+        <input type="password" id="pass"><br/><br/>
+        <button type="button" onclick="compareTwoText()">compare</button>
+    </body>
+</html>

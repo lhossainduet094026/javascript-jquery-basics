@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <title>
+            Fade In Fade Out javascript
+        </title>
+    </head>
+    <body>
+        <script type="text/javascript">
+        var timerId=0;
+        var opacity=0;
+        function fadeOut()
+        {
+            timerId = setInterval(hide,200);
+        }
+        function fadeIn()
+        {
+            timerId=setInterval(show,200);
+        }
+        function hide()
+        {
+             var image=document.getElementById("img1");
+             opacity=Number(window.getComputedStyle(image).getPropertyValue("opacity"));
+                if(opacity>0)
+                {
+                    opacity = opacity-0.1;
+                    image.style.opacity=opacity;
+                    console.log(opacity);
+                }
+                else
+                {
+                    clearInterval(timerId);
+                }
+        }
+        function show()
+        {
+              var image=document.getElementById("img1");
+                opacity=Number(window.getComputedStyle(image).getPropertyValue("opacity"));
+                if(opacity<1)
+                {
+                    opacity = opacity+0.1;
+                    image.style.opacity=opacity;
+                    console.log(opacity);
+                }
+                else
+                {
+                    clearInterval(timerId);
+                }
+        }
+        </script>
+        <button onclick="fadeOut()">fade out</button><br/><br/>
+        <img src="images/logoznzfab.jpg" id="img1" height="10%" style="opacity:1"><br/><br/>
+        <button onclick="fadeIn()">fade In</button>
+    </body>
+</html>

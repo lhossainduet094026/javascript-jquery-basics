@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>
+            radio button in javascript
+        </title>
+    </head>
+    <body>
+        <script type="text/javascript">
+        function optionSelect()
+        {
+         var select = document.getElementById("select");
+         //drop down list is collection of element.so we got by array index
+         alert(select.options[select.selectedIndex].value);
+        }
+        </script>       
+        <select id="select">
+            <option value="staff">staff</option>
+            <option value="officer">officer</option>
+            <option value="worker">worker</option>
+            <option value="security">security</option>
+        </select>
+        <br/><br/>
+        <button type="button" onclick="optionSelect()">click me</button>
+    </body>
+</html>

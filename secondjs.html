@@ -1,0 +1,32 @@
+<html>
+<head>
+    <title>
+Second js practice
+    </title>
+</head>
+<body>
+    <script type="text/javascript">
+        document.write("second javascript practice file<br/><br/>");
+        
+        function alertMessage()
+        {
+            //here document.getElementById("txt") returns the reference of h2 element 
+            //innerHTML is the property of document.getElementById("txt" object
+          var str=document.getElementById("txt").innerHTML;
+          alert(str);
+          document.getElementById("txt").innerHTML="u clicked button ";
+        }
+        function transferText()
+        {
+            var x=document.getElementById("text1").innerHTML;
+            alert(x);
+        }
+    </script>
+        <button onclick="alertMessage()">click here</button>
+        <br/><h2 id="txt">dom object manipulation</h2><br/>
+        <label>enter value</label>
+        <input id="text1" placeholder="user name">
+        <button onclick="transferText()">show</button>
+
+</body>
+</html>

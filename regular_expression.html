@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>
+            Regular expression examples
+        </title>
+    </head>
+    <body>
+        <script type="text/javascript">
+        function validate()
+        {
+            var uname =document.getElementById("uname").value;
+            var regx=/E00/;
+            //regx expression tested in user name text box.if username text box found this regx pattern then it returns true otherwise false
+            //in this example we have not define the position of the pattern
+            if(regx.test(uname))
+            {
+                alert("valid user name");
+            }
+            else
+            alert("invalid user name");
+        }
+            
+       </script>
+    <script type="text/javascript">
+        function clearData()
+        {
+            var uname = document.getElementById("uname").value="";    
+        }
+    </script>
+        <label>user name</label><br/>
+        <input type="text" id="uname">
+        <button onclick="validate()">click here</button>
+        <button onclick="clearData()">clear</button>
+    </body>
+</html>

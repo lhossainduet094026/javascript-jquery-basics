@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>
+            Get Element by class js
+        </title>
+    </head>
+    <body>
+    <script type="text/javascript">
+    document.write("get element by class example");
+    //difference between getElementByTagName and getElementByClassName
+    //by tag name we can find all the same tag of same type but in class name we can get any type of html tag which are different tags but same class name 
+    //if we want to manipulate some tag of same type but not all then we use getelementbyclass name
+    function changeStyle()
+    {
+        var item = document.getElementsByClassName("x");
+        for(var i=0;i<=item.length;i++)
+        {
+            item[i].style.color ="red";
+        }
+    }
+    </script>
+    <p class="x">bangladesh</p>
+    <p class="x">india</p>
+    <p>pakistan</p>
+    <p>bhutan</p>
+    <button type="button" onclick="changeStyle()" >change</button>
+    </body>
+</html>

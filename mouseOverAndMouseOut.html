@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <title>
+            Mouse over and mouse out event 
+        </title>
+    </head>
+    <body>
+        <script type="text/javascript">
+        function setNewImage()
+        {
+        document.getElementById("img1").src="images/logoznzfab.jpg";
+        }
+        function setOldImage()
+        {
+            document.getElementById("img1").src="images/logo.png";
+        }
+        </script>
+        <img src="images/logo.png" id="img1" width="300" onmouseover="setNewImage()" onmouseout="setOldImage()">
+    </body>
+</html>

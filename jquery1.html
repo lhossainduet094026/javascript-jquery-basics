@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <title>Jquery first example</title>
+    </head>
+    <body>
+        <h2 id="headings">jquery first example</h2>
+        <button onclick="fn1()">click here</button>
+    </body>
+    <script src="js/jquery.js"></script>
+    <script>
+    function fn1()
+    {
+        //syntax:$(selector).action()-selector means which dom object to manipulate .action() is the method associated with selector DOM. 
+        $(headings).fadeToggle(5000);
+    }
+    </script>
+</html>
